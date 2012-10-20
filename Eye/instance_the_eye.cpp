@@ -106,8 +106,8 @@ class instance_the_eye : public InstanceMapScript
                 case 19622:
                     Kaelthas = creature->GetGUID();
                     break;
-				case 0: //need entry for tiger boss trash
-					Tiger = creature->GetGUID();
+                case 0: //need entry for tiger boss trash
+                    Tiger = creature->GetGUID();
                 case 18805:
                     Astromancer = creature->GetGUID();
                     break;
@@ -126,45 +126,45 @@ class instance_the_eye : public InstanceMapScript
                 case DATA_GRANDASTROMANCERCAPERNIAN:    return GrandAstromancerCapernian;
                 case DATA_MASTERENGINEERTELONICUS:      return MasterEngineerTelonicus;
                 case DATA_KAELTHAS:                     return Kaelthas;
-				case DATA_TIGER:						return Tiger; //some this replased first 4
+                case DATA_TIGER:						return Tiger; //some this replased first 4
                 case DATA_ASTROMANCER:                  return Astromancer;
                 case DATA_ALAR:                         return Alar;
                 }
                 return 0;
             }
 			
-			void OnPlayerEnter(Player* player)
-			{
-				DoSendNotifyToInstance("Instance testing in progress.. If you found some bugs, please visit our forum and open topic in bugtracker.");
-				char msg[500];
-				sprintf(msg, "%s trying to join instance.. and that successfully! ",player->GetName());
-				sWorld->SendWorldText(LANG_SYSTEMMESSAGE, msg);
-				//float x, y, z;
-				//if (GetData(DATA_ALAREVENT == DONE))
-				if (GetData(DATA_ALAREVENT) == DONE)
-				{
-					//x = 492.832f;  y = -268.767f; z = 21.153f;
-					player->TeleportTo(550, 492.832f, -268.767f, 21.153f, 0);
-					//DoCastSpellOnPlayers();
-					DoSendNotifyToInstance("Instance test alar dead");
-				}
-				if (GetData(DATA_HIGHASTROMANCERSOLARIANEVENT) == DONE)
-				{
-					//x = 492.854f; y = 267.000f;  z = 21.153f;
-					player->TeleportTo(550, 492.854f, 267.0f, 21.153f, 0);
-					//DoCastSpellOnPlayers();
-					DoSendNotifyToInstance("Instance test high dead");
-				}
-				if (GetData(DATA_VOIDREAVEREVENT) == DONE)
-				{
-					//x = 654.584f; y = -0.644f; z = 47.550f;
-					player->TeleportTo(550, 654.584f, -0.644f, 47.550f, 0);
-					//DoCastSpellOnPlayers();
-					DoSendNotifyToInstance("Instance test void dead");
-				}
+            void OnPlayerEnter(Player* player)
+            {
+                DoSendNotifyToInstance("Instance testing in progress.. If you found some bugs, please visit our forum and open topic in bugtracker.");
+                char msg[500];
+                sprintf(msg, "%s trying to join instance.. and that successfully! ",player->GetName());
+                sWorld->SendWorldText(LANG_SYSTEMMESSAGE, msg);
+                //float x, y, z;
+                //if (GetData(DATA_ALAREVENT == DONE))
+                if (GetData(DATA_ALAREVENT) == DONE)
+                {
+                    //x = 492.832f;  y = -268.767f; z = 21.153f;
+                    player->TeleportTo(550, 492.832f, -268.767f, 21.153f, 0);
+                    //DoCastSpellOnPlayers();
+                    DoSendNotifyToInstance("Instance test alar dead");
+                }
+                if (GetData(DATA_HIGHASTROMANCERSOLARIANEVENT) == DONE)
+                {
+                    //x = 492.854f; y = 267.000f;  z = 21.153f;
+                    player->TeleportTo(550, 492.854f, 267.0f, 21.153f, 0);
+                    //DoCastSpellOnPlayers();
+                    DoSendNotifyToInstance("Instance test high dead");
+                }
+                if (GetData(DATA_VOIDREAVEREVENT) == DONE)
+                {
+                    //x = 654.584f; y = -0.644f; z = 47.550f;
+                    player->TeleportTo(550, 654.584f, -0.644f, 47.550f, 0);
+                    //DoCastSpellOnPlayers();
+                    DoSendNotifyToInstance("Instance test void dead");
+                }
 				
-				//player->TeleportTo(550, x, y, z);
-			}
+                //player->TeleportTo(550, x, y, z);
+            }
 
             void SetData(uint32 type, uint32 data)
             {
