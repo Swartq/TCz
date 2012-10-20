@@ -135,9 +135,9 @@ class instance_the_eye : public InstanceMapScript
 			
             void OnPlayerEnter(Player* player)
             {
-                DoSendNotifyToInstance("Instance testing in progress.. If you found some bugs, please visit our forum and open topic in bugtracker.");
+                DoSendNotifyToInstance("Instance testing");
                 char msg[500];
-                sprintf(msg, "%s trying to join instance.. and that successfully! ",player->GetName());
+                sprintf(msg, "%s in eye! ",player->GetName());
                 sWorld->SendWorldText(LANG_SYSTEMMESSAGE, msg);
                 //float x, y, z;
                 //if (GetData(DATA_ALAREVENT == DONE))
