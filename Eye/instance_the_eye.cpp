@@ -53,7 +53,7 @@ class instance_the_eye : public InstanceMapScript
             uint64 GrandAstromancerCapernian;
             uint64 MasterEngineerTelonicus;
             uint64 Kaelthas;
-			uint64 Tiger; //custom
+            uint64 Tiger; //custom
             uint64 Astromancer;
             uint64 Alar;
             uint8 KaelthasEventPhase;
@@ -70,7 +70,7 @@ class instance_the_eye : public InstanceMapScript
                 GrandAstromancerCapernian = 0;
                 MasterEngineerTelonicus = 0;
                 Kaelthas = 0;
-				Tiger = 0; //custom
+                Tiger = 0; //custom
                 Astromancer = 0;
                 Alar = 0;
 
