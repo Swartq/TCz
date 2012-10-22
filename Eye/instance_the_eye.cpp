@@ -126,7 +126,7 @@ class instance_the_eye : public InstanceMapScript
                 case DATA_GRANDASTROMANCERCAPERNIAN:    return GrandAstromancerCapernian;
                 case DATA_MASTERENGINEERTELONICUS:      return MasterEngineerTelonicus;
                 case DATA_KAELTHAS:                     return Kaelthas;
-                case DATA_TIGER:						return Tiger; //some this replased first 4
+                case DATA_TIGER:                        return Tiger; //some this replased first 4
                 case DATA_ASTROMANCER:                  return Astromancer;
                 case DATA_ALAR:                         return Alar;
                 }
@@ -148,14 +148,14 @@ class instance_the_eye : public InstanceMapScript
                     //DoCastSpellOnPlayers();
                     DoSendNotifyToInstance("Instance test alar dead");
                 }
-                if (GetData(DATA_HIGHASTROMANCERSOLARIANEVENT) == DONE)
+                else if (GetData(DATA_HIGHASTROMANCERSOLARIANEVENT) == DONE)
                 {
                     //x = 492.854f; y = 267.000f;  z = 21.153f;
                     player->TeleportTo(550, 492.854f, 267.0f, 21.153f, 0);
                     //DoCastSpellOnPlayers();
                     DoSendNotifyToInstance("Instance test high dead");
                 }
-                if (GetData(DATA_VOIDREAVEREVENT) == DONE)
+                else if (GetData(DATA_VOIDREAVEREVENT) == DONE)
                 {
                     //x = 654.584f; y = -0.644f; z = 47.550f;
                     player->TeleportTo(550, 654.584f, -0.644f, 47.550f, 0);
